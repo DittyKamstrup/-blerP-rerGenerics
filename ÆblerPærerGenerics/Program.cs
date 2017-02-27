@@ -20,7 +20,9 @@ namespace ÆblerPærerGenerics
 
             Console.WriteLine("æble2 equals æble3: " + æble2.Equals(æble3));
 
+            var æble4 = new Æbler() { Navn = "Cox Orange", Lager = 1, Pris = 25.0M };
 
+            Console.WriteLine("æble4 equals æble1: " + æble4.Equals(æble1));
 
 
 

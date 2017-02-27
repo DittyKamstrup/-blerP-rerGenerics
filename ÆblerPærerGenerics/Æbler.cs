@@ -18,7 +18,7 @@ namespace ÆblerPærerGenerics
         {
             Æbler æble = obj as Æbler;
 
-            if (this.Navn == æble.Navn)
+            if (this.Navn == æble.Navn && this.Lager == æble.Lager && this.Pris == æble.Pris)
 
                 return true;
 
@@ -29,7 +29,7 @@ namespace ÆblerPærerGenerics
 
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return this.Navn.GetHashCode() ^ this.Pris.GetHashCode() ^ this.Lager.GetHashCode();
         }
     }
 
