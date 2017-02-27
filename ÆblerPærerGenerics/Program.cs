@@ -38,7 +38,7 @@ namespace ÆblerPærerGenerics
 
             foreach (var item in æbleBeholdning)
             {
-                Console.Write($" navn {item.Navn} pris { item.Pris }");
+                Console.WriteLine($" navn {item.Navn} pris { item.Pris }");
             }
 
             æbleBeholdning.Sort();
@@ -47,9 +47,19 @@ namespace ÆblerPærerGenerics
 
             foreach (var item in æbleBeholdning)
             {
-                Console.Write($" navn {item.Navn} pris { item.Pris }");
+                Console.Write(item.ToString());
+                Console.WriteLine();
             }
 
+            æbleBeholdning.Sort(Æbler.sortLagerDescending());
+
+            Console.WriteLine("EFTER 2. SORTERING PÅ PRIS");
+
+            foreach (var item in æbleBeholdning)
+            {
+                Console.Write(item.ToString());
+                Console.WriteLine();
+            }
 
 
 

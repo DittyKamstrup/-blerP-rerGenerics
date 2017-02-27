@@ -46,6 +46,29 @@ namespace ÆblerPærerGenerics
             
             //throw new NotImplementedException();
         }
+
+        private class sortLagerDescendingHelper : IComparer <Æbler>
+        {
+            public int Compare(Æbler x, Æbler y)
+            {
+                if (x.Lager > y.Lager)
+                    return 1;
+                else if (x.Lager == y.Lager)
+                    return 0;
+                else
+                    return -1;
+            }
+        }
+
+        public static IComparer<Æbler> sortLagerDescending()
+        {
+            return new sortLagerDescendingHelper();
+        }
+
+        public override string ToString()
+        {
+            return $" Navn {this.Navn } Pris {this.Pris} LagerBeholdning {this.Lager}";
+        }
     }
 
 }
