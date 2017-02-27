@@ -43,8 +43,6 @@ namespace ÆblerPærerGenerics
                 return 0;
             else
                 return 1;
-            
-            //throw new NotImplementedException();
         }
 
         private class sortLagerDescendingHelper : IComparer <Æbler>
@@ -59,10 +57,43 @@ namespace ÆblerPærerGenerics
                     return -1;
             }
         }
-
         public static IComparer<Æbler> sortLagerDescending()
         {
             return new sortLagerDescendingHelper();
+        }
+
+        private class sortPrisDecendingHelper : IComparer<Æbler>
+        {
+            int IComparer<Æbler>.Compare(Æbler x, Æbler y)
+            {
+                if (x.Pris > y.Pris)
+                    return 1;
+                else if (x.Pris == y.Pris)
+                    return 0;
+                else
+                    return -1;
+            }
+        }
+        public static IComparer<Æbler> sortPrisDecending()
+        {
+            return (IComparer<Æbler>)new sortPrisDecendingHelper();
+        }
+
+        private class sortPrisAcendingHelper : IComparer<Æbler>
+        {
+            int IComparer<Æbler>.Compare(Æbler x, Æbler y)
+            {
+                if (x.Pris > y.Pris)
+                    return -1 ;
+                else if (x.Pris == y.Pris)
+                    return 0;
+                else
+                    return 1;
+            }
+        }
+        public static IComparer<Æbler> sortPrisAcending()
+        {
+            return (IComparer<Æbler>)new sortPrisAcendingHelper();
         }
 
         public override string ToString()

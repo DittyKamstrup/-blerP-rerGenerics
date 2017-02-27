@@ -25,8 +25,6 @@ namespace ÆblerPærerGenerics
             Console.WriteLine("æble4 equals æble1: " + æble4.Equals(æble1));
 
 
-
-
             //Varebeholdning af Æbler
 
             var æbleBeholdning = new List<Æbler>();
