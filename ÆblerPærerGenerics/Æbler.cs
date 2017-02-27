@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ÆblerPærerGenerics
 {
-    public class Æbler
+    public class Æbler : IComparable <Æbler>
     {
         public string Navn { get; set; }
         public decimal Pris { get; set; }
@@ -22,14 +22,29 @@ namespace ÆblerPærerGenerics
 
                 return true;
 
-            else
+            else if (!(obj is Æbler) || obj == null)
 
+                return false;
+
+            else
                 return false;
         }
 
         public override int GetHashCode()
         {
             return this.Navn.GetHashCode() ^ this.Pris.GetHashCode() ^ this.Lager.GetHashCode();
+        }
+
+        public int CompareTo(Æbler other)
+        {
+            if (this.Pris < other.Pris)
+                return -1;
+            else if (this.Pris == other.Pris)
+                return 0;
+            else
+                return 1;
+            
+            //throw new NotImplementedException();
         }
     }
 

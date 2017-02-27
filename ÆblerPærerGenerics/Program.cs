@@ -27,14 +27,29 @@ namespace ÆblerPærerGenerics
 
 
 
-            ////Varebeholdning af Æbler
+            //Varebeholdning af Æbler
 
-            //var æbleBeholdning = new List<Æbler>();
-            //æbleBeholdning.Add(new Æbler() { Navn = "Ingrid Marie", Lager = 50, Pris = 20.0M });
-            //æbleBeholdning.Add(new Æbler() { Navn = "Cox Orange", Lager = 25, Pris = 10.0M });
-            //æbleBeholdning.Add(new Æbler() { Navn = "Gråsten", Lager = 10, Pris = 22.0M });
-            //æbleBeholdning.Add(new Æbler() { Navn = "Guldborg", Lager = 100, Pris = 9.0M });
-            //æbleBeholdning.Add(new Æbler() { Navn = "LøgÆble", Lager = 4, Pris = 5.0M });
+            var æbleBeholdning = new List<Æbler>();
+            æbleBeholdning.Add(new Æbler() { Navn = "Ingrid Marie", Lager = 50, Pris = 20.0M });
+            æbleBeholdning.Add(new Æbler() { Navn = "Cox Orange", Lager = 25, Pris = 10.0M });
+            æbleBeholdning.Add(new Æbler() { Navn = "Gråsten", Lager = 10, Pris = 22.0M });
+            æbleBeholdning.Add(new Æbler() { Navn = "Guldborg", Lager = 100, Pris = 9.0M });
+            æbleBeholdning.Add(new Æbler() { Navn = "LøgÆble", Lager = 4, Pris = 5.0M });
+
+            foreach (var item in æbleBeholdning)
+            {
+                Console.Write($" navn {item.Navn} pris { item.Pris }");
+            }
+
+            æbleBeholdning.Sort();
+
+            Console.WriteLine("EFTER SORTERING PÅ PRIS");
+
+            foreach (var item in æbleBeholdning)
+            {
+                Console.Write($" navn {item.Navn} pris { item.Pris }");
+            }
+
 
 
 
