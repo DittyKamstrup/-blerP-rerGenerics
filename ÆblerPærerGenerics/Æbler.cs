@@ -50,11 +50,11 @@ namespace ÆblerPærerGenerics
             public int Compare(Æbler x, Æbler y)
             {
                 if (x.Lager > y.Lager)
-                    return 1;
+                    return -1;
                 else if (x.Lager == y.Lager)
                     return 0;
                 else
-                    return -1;
+                    return 1;
             }
         }
         public static IComparer<Æbler> sortLagerDescending()
@@ -67,11 +67,11 @@ namespace ÆblerPærerGenerics
             int IComparer<Æbler>.Compare(Æbler x, Æbler y)
             {
                 if (x.Pris > y.Pris)
-                    return 1;
+                    return -1;
                 else if (x.Pris == y.Pris)
                     return 0;
                 else
-                    return -1;
+                    return 1;
             }
         }
         public static IComparer<Æbler> sortPrisDecending()
@@ -84,11 +84,11 @@ namespace ÆblerPærerGenerics
             int IComparer<Æbler>.Compare(Æbler x, Æbler y)
             {
                 if (x.Pris > y.Pris)
-                    return -1 ;
+                    return 1 ;
                 else if (x.Pris == y.Pris)
                     return 0;
                 else
-                    return 1;
+                    return -1;
             }
         }
         public static IComparer<Æbler> sortPrisAcending()

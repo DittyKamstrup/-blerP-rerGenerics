@@ -51,7 +51,18 @@ namespace ÆblerPærerGenerics
 
             æbleBeholdning.Sort(Æbler.sortLagerDescending());
 
-            Console.WriteLine("EFTER 2. SORTERING PÅ PRIS");
+            Console.WriteLine("EFTER 2. SORTERING PÅ PRIS (LagerDescending)");
+
+            foreach (var item in æbleBeholdning)
+            {
+                Console.Write(item.ToString());
+                Console.WriteLine();
+            }
+
+
+            æbleBeholdning.Sort(Æbler.sortPrisDecending());
+
+            Console.WriteLine("EFTER 3. SORTERING PÅ PRIS (PrisDecending)");
 
             foreach (var item in æbleBeholdning)
             {
